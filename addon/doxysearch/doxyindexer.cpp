@@ -237,7 +237,11 @@ class XMLContentHandler : public QXmlDefaultHandler
         switch (m_curFieldName)
         {
           case TypeField:    
-          case NameField:    
+        	  m_indexer.index_text(m_data, 50, "T");
+        	  break;
+          case NameField:
+        	  m_indexer.index_text(m_data, 50, "N");
+        	  break;
           case TagField:     
           case UrlField:     
             // meta data that is not searchable

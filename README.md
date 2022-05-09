@@ -2,6 +2,8 @@ Doxygen
 ===============
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HHLRBCC8B2B8)
 
+**The search box in external search mode now supports type: and name: prefixes. Also added support for mixing rules with boolean operators(AND, OR, NOT).**
+
 Doxygen is the de facto standard tool for generating documentation from
 annotated C++ sources, but it also supports other popular programming
 languages such as C, Objective-C, C#, PHP, Java, Python, IDL

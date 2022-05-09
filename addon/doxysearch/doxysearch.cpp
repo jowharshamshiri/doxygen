@@ -373,6 +373,8 @@ int main(int argc,char **argv)
     parser.set_database(db);
     parser.set_default_op(Xapian::Query::OP_AND);
     parser.set_stemming_strategy(Xapian::QueryParser::STEM_ALL);
+    parser.add_prefix("type","T");
+    parser.add_prefix("name","N");
     Xapian::termcount max_expansion=100;
 #if (XAPIAN_MAJOR_VERSION==1) && (XAPIAN_MINOR_VERSION==2)
     parser.set_max_wildcard_expansion(max_expansion);
@@ -383,7 +385,9 @@ int main(int argc,char **argv)
                                            Xapian::QueryParser::FLAG_DEFAULT  |
                                            Xapian::QueryParser::FLAG_WILDCARD |
                                            Xapian::QueryParser::FLAG_PHRASE   |
-                                           Xapian::QueryParser::FLAG_PARTIAL
+                                           Xapian::QueryParser::FLAG_PARTIAL  |
+										   Xapian::QueryParser::FLAG_BOOLEAN  |
+										   Xapian::QueryParser::FLAG_PURE_NOT
                                           );
     enquire.set_query(query);
 
