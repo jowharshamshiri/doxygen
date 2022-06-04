@@ -375,6 +375,7 @@ int main(int argc,char **argv)
     parser.set_stemming_strategy(Xapian::QueryParser::STEM_ALL);
     parser.add_prefix("type","T");
     parser.add_prefix("name","N");
+    parser.add_prefix("file","N");
     Xapian::termcount max_expansion=100;
 #if (XAPIAN_MAJOR_VERSION==1) && (XAPIAN_MINOR_VERSION==2)
     parser.set_max_wildcard_expansion(max_expansion);
